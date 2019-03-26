@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Second Webpage</title>
+        <style>
+            nav {
+                background-color: aquamarine;
+            }
+            ul, li{
+                text-decoration: none;
+                display: inline;
+                margin-right: 30px;
+            }
+            .main-body {
+                margin: auto;
+                text-align: center;
+            }
+
+            body {
+                height: 100vh;
+                margin:0;
+
+            }
+        </style>
+    </head>
+    <script>
+        function checkFlag(){
+            let flag = document.getElementById("flag").value;
+            const encryptedFlag = btoa(flag);
+            if ( btoa(flag) === "Y3lzb2N7YjF0c180bmRfcDFlYzNzfQ==") {
+                document.getElementById("response").textContent = "Correct Flag";
+            } else {
+                document.getElementById("response").textContent = "Incorrect Flag, get away from my secrets";
+            }
+        }
+    </script>
+    <body oncontextmenu="return false">
+        <nav class="nav">
+            <ul class="nav-links">
+                <li> <a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-body">
+            <h1>My Second Webpage</h1>
+            <p>You got my sauce once but you'll never get the sauce again, I have put measures in place so you can't get my secret sauce!</p>
+            <input type="text" id="flag" />
+            <button type="button" onclick="checkFlag()">Check</button>
+            <p id="response"></p>
+            <img src="5328995.jpg" >
+        </div>
+    </body>
+</html>
